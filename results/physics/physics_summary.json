@@ -1,0 +1,40 @@
+{
+  "onset_of_convective_enhancement": {
+    "Ra": {
+      "Nu_conduction_limit": 0.974854436862229,
+      "onset_value_5pct": 2509.958634224274,
+      "onset_Ra_m": 2.509958634224274
+    },
+    "Da": {
+      "Nu_conduction_limit": 0.980150505064716,
+      "onset_value_5pct": 2.1231689478820097e-05,
+      "onset_Ra_m": 2.1231689478820095
+    }
+  },
+  "darcy_rayleigh_similarity": {
+    "Ra_m_range_compared": [
+      1.0,
+      1000.0
+    ],
+    "Nu_ratio_Rasweep_over_Dasweep_min": 0.8810683564015861,
+    "Nu_ratio_Rasweep_over_Dasweep_max": 1.7866595717920688,
+    "Nu_ratio_at_Ra_m_10": 0.8979032592877506,
+    "Nu_ratio_at_Ra_m_1000": 1.7866595717920688,
+    "Nu_crossover_Ra_m": [
+      99.2328622883255
+    ],
+    "psi_ratio_min": 0.5251815993633805,
+    "psi_ratio_max": 8.34669897695993
+  },
+  "psi_max_extrema": {
+    "Ra_at_psi_peak_GP": 53233.07396280868,
+    "psi_peak_GP": 0.012391863037285478,
+    "Ra_at_psi_peak_CFD_grid": 56234.1325190349,
+    "psi_peak_CFD": 0.0123900458414523,
+    "Nu_at_psi_peak_GP": 3.4273862803201687,
+    "psi_drop_from_peak_to_Ra1e6_%": 25.03720513626594,
+    "Nu_gain_from_peak_to_Ra1e6_%": 211.3890205034178,
+    "A_at_psi_min_GP": 0.04549137284321081,
+    "psi_min_A_GP": 0.01216661557590962
+  }
+}

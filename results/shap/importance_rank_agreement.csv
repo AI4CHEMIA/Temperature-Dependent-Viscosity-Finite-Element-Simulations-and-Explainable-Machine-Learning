@@ -1,0 +1,15 @@
+target,model,kendall_tau_vs_CFD,ranking
+avgNu,RF,0.9999999999999999,Ra > Da > C > A > R
+avgNu,MLP,0.9999999999999999,Ra > Da > C > A > R
+avgNu,GP,0.9999999999999999,Ra > Da > C > A > R
+avgNu,CFD,1.0,Ra > Da > C > A > R
+avgNu,RF (design-space SHAP),0.9999999999999999,Ra > Da > C > A > R
+avgNu,MLP (design-space SHAP),0.9999999999999999,Ra > Da > C > A > R
+avgNu,GP (design-space SHAP),0.9999999999999999,Ra > Da > C > A > R
+psi_max,RF,0.9999999999999999,Da > C > Ra > R > A
+psi_max,MLP,0.9999999999999999,Da > C > Ra > R > A
+psi_max,GP,0.9999999999999999,Da > C > Ra > R > A
+psi_max,CFD,1.0,Da > C > Ra > R > A
+psi_max,RF (design-space SHAP),0.7999999999999999,Da > Ra > C > R > A
+psi_max,MLP (design-space SHAP),0.9999999999999999,Da > C > Ra > R > A
+psi_max,GP (design-space SHAP),0.9999999999999999,Da > C > Ra > R > A

@@ -1,0 +1,8 @@
+sweep,test_extrap,test_interp,train,val_extrap,val_interp,total
+A,12,8,53,10,7,90
+C,8,4,28,6,4,50
+Da,8,5,36,6,5,60
+R,8,4,29,6,4,51
+Ra,8,5,36,6,5,60
+base,0,0,1,0,0,1
+TOTAL,44,26,183,34,25,312
