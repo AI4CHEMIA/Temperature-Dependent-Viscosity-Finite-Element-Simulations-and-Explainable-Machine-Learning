@@ -27,15 +27,15 @@ were never simulated, so those predictions are unvalidated.
 
 ## Pipeline
 
-| Step | Script | What it does | Reads test labels? |
-|---|---|---|---|
-| 1 | `scripts/01_preprocess.py` | Cleans the sheet, drops constant inputs (Pr, N), removes 4 base-case replicates, labels every run by its sweep, builds the deterministic sweep-aware split | defines them |
-| 2 | `scripts/02_train.py` | Grid search per model family on **validation only** (score = ½ MAPE val-interp + ½ MAPE val-extrap), with and without the log10(Ra·Da) feature; refits the winner on train+val; saves models and predictions | no |
-| 3 | `scripts/03_evaluate.py` | Single evaluation on the isolated test set (interpolation / extrapolation / all, per sweep, bootstrap 95 % CI); figures 2–4 | **yes (only here)** |
-| 4 | `scripts/04_extrapolation_study.py` | Extrapolation stress test: removes the outer 25 % of each sweep from train+val and measures error vs distance; figure 5 | no |
-| 5 | `scripts/05_shap_analysis.py` | Exact SHAP for RF, MLP and GP: base-case reference (on-manifold) and Sobol design-space background (off-manifold); additivity and cross-model agreement; figures 6–8 | no |
-| 6 | `scripts/06_physics_insights.py` | Local scaling exponents, elasticities at the base case, Darcy–Rayleigh similarity test, ψ extrema, heat-transfer/circulation coupling, physics-feature ablation; figures 9–11 | no |
-| 7 | `scripts/07_verify.py` | 9 independent checks (checksum, leakage, extrapolation placement, reproduction of predictions, metrics and SHAP) | yes (recomputes) |
+| Step | Script | What it does | 
+|---|---|---|
+| 1 | `scripts/01_preprocess.py` | Cleans the sheet, drops constant inputs (Pr, N), removes 4 base-case replicates, labels every run by its sweep, builds the deterministic sweep-aware split |
+| 2 | `scripts/02_train.py` | Grid search per model family on **validation only** (score = ½ MAPE val-interp + ½ MAPE val-extrap), with and without the log10(Ra·Da) feature; refits the winner on train+val; saves models and predictions |
+| 3 | `scripts/03_evaluate.py` | Single evaluation on the isolated test set (interpolation / extrapolation / all, per sweep, bootstrap 95 % CI); figures 2–4 | 
+| 4 | `scripts/04_extrapolation_study.py` | Extrapolation stress test: removes the outer 25 % of each sweep from train+val and measures error vs distance; figure 5 | 
+| 5 | `scripts/05_shap_analysis.py` | Exact SHAP for RF, MLP and GP: base-case reference (on-manifold) and Sobol design-space background (off-manifold); additivity and cross-model agreement; figures 6–8 |
+| 6 | `scripts/06_physics_insights.py` | Local scaling exponents, elasticities at the base case, Darcy–Rayleigh similarity test, ψ extrema, heat-transfer/circulation coupling, physics-feature ablation; figures 9–11 |
+| 7 | `scripts/07_verify.py` | 9 independent checks (checksum, leakage, extrapolation placement, reproduction of predictions, metrics and SHAP) | 
 
 ## Folder contents
 
@@ -55,9 +55,8 @@ results/predictions/extrapolation_stress_test_predictions.csv
 results/metrics/                             test metrics (+CI), per-sweep metrics, stress-test summaries, PI coverage
 results/shap/                                SHAP values (both backgrounds), importance, rank agreement, faithfulness, additivity
 results/physics/                             exponents, elasticities, coupling, similarity, ablation, physics_summary.json
-results/figures/                             fig02-fig11 (300 dpi PNG)
+results/figures/                             mlfig02-fig11
 examples/example_inputs.csv                  sample input file for predict.py (last row = an unvalidated multi-parameter case)
-PAPER_METHODS_RESULTS.md                     paper-ready description of methods, results, SHAP and physical insights
 ```
 
 ## Subset definitions
